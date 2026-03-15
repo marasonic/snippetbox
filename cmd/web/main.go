@@ -56,7 +56,7 @@ func main() {
 	srv := &http.Server{
 		Addr:     *addr,
 		ErrorLog: errorLog,
-		Handler:  mux,
+		Handler:  app.routes(),
 	}
 	infoLog.Printf("Starting server on :%s", *addr)
 	// Call the ListenAndServe() method on our new http.Server struct.
